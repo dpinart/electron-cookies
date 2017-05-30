@@ -18,7 +18,11 @@
       parts = s.split('=');
       if (parts.length === 2) {
         key = parts[0], value = parts[1];
-      } else {
+      }else if(parts.length > 2){
+        key = parts[0];
+        value = parts[1];
+      }
+      else {
         value = parts[0];
         key = '';
       }
